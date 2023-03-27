@@ -1,0 +1,21 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = MinigzLib
+  FILE_GUID                      = 80D6FADE-AEAB-438F-9FC9-D026B937E1DD
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = MinigzLib
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  droidboot.dec
+
+[LibraryClasses]
+  droidbootLibcHack
+
+[Sources]
+  mini_gzip.c
+  miniz.c
+
