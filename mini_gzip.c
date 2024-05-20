@@ -9,8 +9,11 @@
  * I had to rewrite it, since strake's version was powered by UNIX FILE* API,
  * while the key objective was to perform memory-to-memory operations
  */
-
+#ifdef PLATFORM_UBOOT
+#include <log.h>
+#else
 #include <assert.h>
+#endif
 #include <stdint.h>
 #include <string.h>
 
